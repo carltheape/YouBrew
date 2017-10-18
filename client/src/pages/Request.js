@@ -13,8 +13,10 @@ class Request extends Component {
   render() {
     return (
       <Container fluid>
+		<div class="container" id="request">
+		<h1>Send us your brew request</h1>
         <form>
-        <div className="form-group">
+        <div id="requestform" className="form-group">
           <label htmlFor="exampleFormControlInput1">Name</label>
           <input type="name" className="form-control" id="userName" placeholder="Florian Hutter" />
         </div>
@@ -39,6 +41,7 @@ class Request extends Component {
            <RequestBtn id="mail" >Send Request</RequestBtn>
         </div>
       </form>
+	  </div>
       </Container>
     )
   }

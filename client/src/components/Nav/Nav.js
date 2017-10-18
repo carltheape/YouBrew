@@ -66,7 +66,7 @@ class Nav extends React.Component {
           </button>
           <img id="logo" alt="YouBrew" src="assets/images/YouBrewv3.png" />
         </div>
-        <div id="navbar" className="navbar-collapse collapse col-lg-4 col-lg-offset-6">
+        <div id="navbar" className="navbar-collapse collapse col-lg-7 col-lg-offset-4">
           <ul className="nav navbar-nav navbar-right">
             <li><a onClick={() => this.handleNavClick("/")} style={homeStyle} className="open" href="/">Home</a></li>
             <li><a onClick={() => this.handleNavClick("availability")} style={availabilityStyle} href="availability">Availability</a></li>
