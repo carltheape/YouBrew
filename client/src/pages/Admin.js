@@ -31,14 +31,15 @@ const modalStyles = {
     backgroundColor   : 'rgba(77,68,41,0.57)'
   },
   content : {
-    top               : '40%',
+    width             : '500px',
+    top               : '50%',
     left              : '50%',
     right             : 'auto',
     bottom            : 'auto',
     marginRight       : '-50%',
     transform         : 'translate(-50%, -50%)',
-	backgroundColor   : 'rgba(255,230,153,1.00)',
-	borderRadius      : '10px',
+  	backgroundColor   : 'rgba(255,255,255,1.00)',
+  	borderRadius      : '10px',
   }
 };
 
@@ -294,14 +295,7 @@ class Admin extends Component {
         <AddRecipeBtn onClick={this.openRecipeModal}>Add new recipe</AddRecipeBtn>
         <AddUserBtn onClick={this.openUserModal}>Add new user</AddUserBtn>
         <Modal
-          style={{
-              overlay: {
-                backgroundColor: 'papayawhip'
-              },
-              content: {
-                color: 'lightsteelblue'
-              }
-            }}
+          style={modalStyles}
           isOpen={this.state.modalIsOpen}
           onAfterOpen={this.afterOpenModal}
           onRequestClose={this.closeModal}
@@ -321,8 +315,16 @@ class Admin extends Component {
               <input onChange={this.handleInputChange} type="checkbox" name="isAdmin" id="isAdmin" value={this.state.isAdmin}/>
                &zwnj; &zwnj; Give administrative privileges
             </p>
-            <button onClick={this.closeModal}>Add user</button>
-            <button onClick={this.closeModal}>Cancel</button>
+            <FormBtn
+              className="submit btn btn-primary"
+              onClick={this.closeModal}>
+              Submit
+            </FormBtn>
+            <FormBtn
+              className="submit btn btn-primary"
+              onClick={this.closeModal}>
+              Cancel
+            </FormBtn>
           </div>
           : this.state.userModalOpen ?
           <div>
@@ -348,29 +350,27 @@ class Admin extends Component {
               placeholder="Password (required)"
             />
             <p>
-            <input 
-              type="checkbox" 
-              name="isAdmin" 
-              value={this.state.isAdmin} 
-              onChange={this.handleInputChange} 
+            <input
+              type="checkbox"
+              name="isAdmin"
+              value={this.state.isAdmin}
+              onChange={this.handleInputChange}
               onClick={console.log(this.state)}
             />
               Give admin privileges?
             </p>
             <div className="form-group">
               <FormBtn
-                className="cancel btn btn-danger"
-                onClick={this.closeModal}
-              >
+                className="cancel btn btn-primary"
+                onClick={this.closeModal}>
                 Close
               </FormBtn>
-              <FormBtn
-                className="submit btn btn-success"
-                disabled={!(this.state.email && this.state.password && this.state.password)}
-                onClick={this.handleUserFormSubmit}
-              >
-                Add New User
-              </FormBtn>
+            <FormBtn
+              className="submit btn btn-primary"
+              disabled={!(this.state.email && this.state.password && this.state.password)}
+              onClick={this.handleUserFormSubmit}>
+              Add New User
+            </FormBtn>
             </div>
             <br/>
             <br/>
@@ -398,8 +398,16 @@ class Admin extends Component {
                 placeholder="Number of Barrels (required)"
               />
             </p>
-            <button onClick={this.handleBatchFormSubmit}>Brew</button>
-            <button onClick={this.closeModal}>Cancel</button>
+            <FormBtn
+              className="cancel btn btn-primary"
+              onClick={this.closeModal}>
+              Brew
+            </FormBtn>
+            <FormBtn
+              className="cancel btn btn-primary"
+              onClick={this.closeModal}>
+              Cancel
+            </FormBtn>
           </div>
           : this.state.recipeModalOpen ?
           <div>
@@ -431,32 +439,39 @@ class Admin extends Component {
                   onChange={this.handleInputChange}
                   name="recipeDesc"
                 />
-              <p>Brew Time(weeks): </p>
-              <Input
-                value={this.state.brewTime}
-                onChange={this.handleInputChange}
-                name="brewTime"
-                placeholder="(required)"
-              />
-              <p>Production: </p>
-              <select 
-                defaultValue={this.state.production}
-                onChange={this.handleChange}
-              >
-                <option value="Year-Round">Year-Round</option>
-                <option value="Seasonal">Seasonal</option>
-                <option value="Limited">Limited</option>
-                <option value="Specailty">Specailty</option>
-              </select>
-              <p>Notes: </p>
-              <Input
-                value={this.state.recipeNotes}
-                onChange={this.handleInputChange}
-                name="recipeNotes"
-              />
-              
-            <button onClick={this.handleRecipeFormSubmit}>Add Recipe</button>
-            <button onClick={this.closeModal}>Cancel</button>
+              <p>Brew Time(weeks):
+                <Input
+                  value={this.state.brewTime}
+                  onChange={this.handleInputChange}
+                  name="brewTime"
+                  placeholder="(required)"
+                />
+              </p>
+              <p>Production:
+                <select value={this.state.production}>
+                  <option value="Year-Round">Year-Round</option>
+                  <option value="Seasonal">Seasonal</option>
+                  <option value="Limited">Limited</option>
+                  <option value="Specailty">Specailty</option>
+                </select>
+              </p>
+              <p>Notes:
+                <Input
+                  value={this.state.recipeNotes}
+                  onChange={this.handleInputChange}
+                  name="recipeNotes"
+                />
+              </p>
+            <FormBtn
+              className="cancel btn btn-primary"
+              onClick={this.handleRecipeFormSubmit}>
+              Add Recipe
+            </FormBtn>
+            <FormBtn
+              className="cancel btn btn-primary"
+              onClick={this.closeModal}>
+              Cancel
+            </FormBtn>
           </div>
           :
           console.log("nah")
