@@ -41,10 +41,6 @@ const modalStyles = {
   }
 };
 
-const bodyStyle = {
-  backgroundColor: "rgb(52,12,13)"
-}
-
 class Admin extends Component {
 
   state = {
@@ -196,8 +192,6 @@ class Admin extends Component {
     this.setState({modalIsOpen: false});
   }
 
-
-
   render() {
     const users = this.state.users;
     return (
@@ -207,7 +201,7 @@ class Admin extends Component {
       <Container>
 
         <Row>
-          <Col size="md-14">
+          <Col size="md-10">
             <h1>Access Control</h1>
             <ReactTable className="-striped -highlight"
               data={users}

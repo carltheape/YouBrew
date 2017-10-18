@@ -129,7 +129,7 @@ h1 {
 
 .footer {
   position: fixed;
-  bottom: 0;
+  bottom: 0px;
   width: 100%;
   /* Set the fixed height of the footer here */
   height: 30px;
@@ -138,6 +138,7 @@ h1 {
   margin-bottom: 0px;
   grid-row-start: 2;
   grid-row-end: 3;
+	
 }
 
 .text-muted {

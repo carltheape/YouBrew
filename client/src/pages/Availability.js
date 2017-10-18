@@ -1,4 +1,3 @@
-import "./pages.css";
 import React, { Component } from "react";
 import { Link } from "react-router-dom";
 import API from "../utils/API";
@@ -10,7 +9,6 @@ import Modal from 'react-modal';
 import "react-table/react-table.css";
 import { ReactTableDefaults } from 'react-table'
 var sessionStorage = require('web-storage')().sessionStorage;
-
 
 // this is a react-table feature that allows us to override some defaults
 Object.assign(ReactTableDefaults, {
@@ -153,9 +151,9 @@ class Availability extends Component {
     return (
       <Container>
         <Row>
-          <Col size="md-14">
+          <Col size="md-10">
             <h1>Inventory</h1>
-            <ReactTable className="table-style -striped -highlight"
+            <ReactTable className="-striped -highlight"
               data={recipes}
               columns={[
               {
@@ -193,9 +191,9 @@ class Availability extends Component {
           </Col>
         </Row>
         <Row>
-          <Col size="md-14">
+          <Col size="md-10">
             <h1>In process</h1>
-            <ReactTable className="table-style -striped -highlight"
+            <ReactTable className="-striped -highlight"
               data={batches}
               columns={[
               {
