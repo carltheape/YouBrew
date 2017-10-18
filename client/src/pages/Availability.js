@@ -213,33 +213,33 @@ class Availability extends Component {
                 accessor: "totalVol",
                 maxWidth: 70,
               },
-			        {
-                Header: "Progress",
-                accessor: "progressBar",
-				        maxWidth: 200,
-                Cell: row => (
-                                <div
-                                  style={{
-                                    width: '100%',
-                                    height: '100%',
-                                    backgroundColor: '#dadada',
-                                    borderRadius: '2px'
-                                  }}
-                                >
-                                  <div
-                                    style={{
-                                      width: `${row.value}%`,
-                                      height: '100%',
-                                      backgroundColor: row.value > 66 ? '#85cc00'
-                                        : row.value > 33 ? '#ffbf00'
-                                        : '#ff2e00',
-                                      borderRadius: '2px',
-                                      transition: 'all .2s ease-out'
-                                    }}
-                                  />
-                                </div>
-                              )
-              },
+			        // {
+              //   Header: "Progress",
+              //   accessor: "progress",
+				      //   maxWidth: 175,
+              //   Cell: row => (
+              //                   <div
+              //                     style={{
+              //                       width: '100%',
+              //                       height: '100%',
+              //                       backgroundColor: '#dadada',
+              //                       borderRadius: '2px'
+              //                     }}
+              //                   >
+              //                     <div
+              //                       style={{
+              //                         width: `${row.value}%`,
+              //                         height: '100%',
+              //                         backgroundColor: row.value > 66 ? '#85cc00'
+              //                           : row.value > 33 ? '#ffbf00'
+              //                           : '#ff2e00',
+              //                         borderRadius: '2px',
+              //                         transition: 'all .2s ease-out'
+              //                       }}
+              //                     />
+              //                   </div>
+              //                 )
+              // },
               {
                 Header: "Ready by",
                 accessor: "endDate",

@@ -18,19 +18,19 @@ const modalStyles = {
     left              : 0,
     right             : 0,
     bottom            : 0,
-    backgroundColor   : 'rgba(0,0,0,0.73)'
+    backgroundColor   : 'rgba(0,0,0,0.5)'
   },
   content : {
-	width			  : '80%',
-	input			  : '100%',
-    top               : '40%',
-    left              : '50%',
-    right             : 'auto',
-    bottom            : 'auto',
-    marginRight       : '-50%',
-    transform         : 'translate(-50%, -50%)',
+	width		      	  : '50%',
+	input			        : '50%',
+  top               : '50%',
+  left              : '50%',
+  right             : 'auto',
+  bottom            : 'auto',
+  // marginRight       : '-50%',
+  transform         : 'translate(-50%, -50%)',
 	background        : 'rgba(255,230,153,1.00)',
-	inputwidth		  : '100%',
+	inputwidth        : '100%',
 	borderRadius      : '10px',
   }
 };
@@ -42,7 +42,7 @@ class MyRecipes extends Component {
      modalIsOpen: false,
      recipes: []
   };
- 
+
   componentWillMount() {
     this.loadRecipes();
   }
@@ -92,7 +92,7 @@ class MyRecipes extends Component {
   render() {
     const recipes = this.state.recipes;
     return (
-      
+
       <Container>
         <div>
           {this.state.recipes.length ? (
@@ -137,27 +137,28 @@ class MyRecipes extends Component {
         </div>
 
         <Modal
+          style={modalStyles}
           isOpen={this.state.modalIsOpen}
           onAfterOpen={this.afterOpenModal}
           onRequestClose={this.closeModal}
           style={modalStyles}
           contentLabel="edit"
         >
-        
+
           <h2>{this.state.name}</h2>
 
-          <form>
+          <form id="recipe-input-form">
             <p>Recipe: <input id="recipeinput"/></p><br />
             <p>Style: <input id="recipeinput"/></p><br />
             <p>ABV: <input id="recipeinput"/></p><br />
-            <p>Description: <textarea rows="4" id="recipeinput"/></p><br />
+            <p>Description: <br /><textarea rows="4" id="recipeinput"/></p><br />
             <p>Brewtime: <input id="recipeinput"/></p><br />
             <p>Season: <input id="recipeinput"/></p><br />
             <p>Notes: <input id="recipeinput"/></p><br />
           </form>
-        
+
           <button onClick={this.closeModal}>Cancel</button>
-          <button onClick={this.closeModal}>Submit</button>     
+          <button onClick={this.closeModal}>Submit</button>
         </Modal>
 
       </Container>
