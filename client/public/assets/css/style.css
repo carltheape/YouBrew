@@ -163,6 +163,7 @@ h1 {
   .fullscreen-bg__video {
     display: none;
   }
+
 	#login-area{
 	margin-top: 0px;
 }
@@ -184,6 +185,12 @@ h1 {
   float: right;
   position: absolute;
   right: 150px;
+}
+
+.deleteRec{
+  float: right;
+  position: absolute;
+  right: 20px;
 }
 
 #logo{

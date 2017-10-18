@@ -6,7 +6,7 @@ const batchSchema = new Schema({
   // style: [{ type: Schema.Types.ObjectId, ref: 'Recipe'}],
   name: [{ type: String, required: true, unique:true }],
   style: [{ type: String, required: true }],
-  availVol: { type: Number, required: true },
+  availVol: { type: Number, required: false },
   totalVol: { type: Number, required: true },
   date: { type: Date, default: Date.now },
   endDate: { type: Date, required: true },
