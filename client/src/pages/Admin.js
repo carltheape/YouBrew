@@ -89,7 +89,7 @@ class Admin extends Component {
                   password: this.state.password,
                   isAdmin: this.state.isAdmin
               })).then(function(response) {
-                  console.log(response.request); 
+                  console.log(response.request);
                   self.setState({ name: "", email: "", password: "", isAdmin: "", error: "" });
               })
               .catch(function(error) {
@@ -265,11 +265,19 @@ class Admin extends Component {
         <AddRecipeBtn onClick={this.openRecipeModal}>Add new recipe</AddRecipeBtn>
         <AddUserBtn onClick={this.openUserModal}>Add new user</AddUserBtn>
         <Modal
+          style={{
+              overlay: {
+                backgroundColor: 'papayawhip'
+              },
+              content: {
+                color: 'lightsteelblue'
+              }
+            }}
           isOpen={this.state.modalIsOpen}
           onAfterOpen={this.afterOpenModal}
           onRequestClose={this.closeModal}
           style={modalStyles}
-          contentLabel="Example Modal"
+          contentLabel="Modal"
         >
         {this.state.editModalOpen ?
           <div>
@@ -329,7 +337,7 @@ class Admin extends Component {
             </div>
             <br/>
             <br/>
-          {this.state.error != "" ? (<div className="alert alert-danger">{this.state.error}</div>) : (<div />)}              
+          {this.state.error != "" ? (<div className="alert alert-danger">{this.state.error}</div>) : (<div />)}
 
           </div>
 
