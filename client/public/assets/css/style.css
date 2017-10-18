@@ -38,6 +38,16 @@ h1 {
 	margin-top: 40px;
 }
 
+#request{
+	max-width: 60%;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+#requestform{
+	margin-top: 50px;
+}
+
 #form-username{
 	background-color: transparent;
 	border-color: #30231d;
@@ -122,7 +132,7 @@ h1 {
 
 .footer {
   position: fixed;
-  bottom: 0;
+  bottom: 0px;
   width: 100%;
   /* Set the fixed height of the footer here */
   height: 30px;
@@ -131,12 +141,14 @@ h1 {
   margin-bottom: 0px;
   grid-row-start: 2;
   grid-row-end: 3;
+	
 }
 
 .text-muted {
     color: #ffbd36;
 	padding-top: 7px;
 }
+
 
 @media (min-aspect-ratio: 16/9) {
   .fullscreen-bg__video {
@@ -216,34 +228,36 @@ h1 {
 
 .navbar-default .navbar-brand:hover,
 .navbar-default .navbar-brand:focus {
-    color: #30231d;
+    color: #770000;
 }
 /* Link */
 .navbar-default .navbar-nav > li > a {
     color: #30231d;
 }
-.navbar-default .navbar-nav > li > a:hover,
+.navbar-default .navbar-nav > li > a:hover {
+	color: #F0AD4E;
+}
 .navbar-default .navbar-nav > li > a:focus {
-    color: #30231d;
+    color: #770000;
 }
 .navbar-default .navbar-nav > .active > a,
 .navbar-default .navbar-nav > .active > a:hover,
 .navbar-default .navbar-nav > .active > a:focus {
-    color: #30231d;
+    color: #770000;
     background-color: transparent;
 }
 
 .navbar-default .navbar-nav > .active > a,
 .navbar-default .navbar-nav > .active > a:hover,
 .navbar-default .navbar-nav > .active > a:focus {
-    color: #30231d;
+    color: #770000;
     background-color: transparent;
 }
 
-	.navbar-default .navbar-nav > .open > a,
+.navbar-default .navbar-nav > .open > a,
 .navbar-default .navbar-nav > .open > a:hover,
 .navbar-default .navbar-nav > .open > a:focus {
-    color: #555;
+    color: #770000;
     background-color: transparent;
 }
 /* Caret */
@@ -253,14 +267,14 @@ h1 {
 }
 .navbar-default .navbar-nav > .dropdown > a:hover .caret,
 .navbar-default .navbar-nav > .dropdown > a:focus .caret {
-    border-top-color: #30231d;
+    border-top-color: #770000;
     border-bottom-color: transparent;
 }
 .navbar-default .navbar-nav > .open > a .caret,
 .navbar-default .navbar-nav > .open > a:hover .caret,
 .navbar-default .navbar-nav > .open > a:focus .caret {
-    border-top-color: #555;
-    border-bottom-color: #555;
+    border-top-color:#770000;
+    border-bottom-color: #30231d;
 }
 /* Mobile version */
 .navbar-default .navbar-toggle {
@@ -268,16 +282,19 @@ h1 {
 }
 .navbar-default .navbar-toggle:hover,
 .navbar-default .navbar-toggle:focus {
-    background-color: #30231d;
+    background-color: #F0AD4E;
 }
 .navbar-default .navbar-toggle .icon-bar {
     background-color: #30231d;
 }
+
 @media (max-width: 767px) {
     .navbar-default .navbar-nav .open .dropdown-menu > li > a {
         color: #30231d;
     }
-    .navbar-default .navbar-nav .open .dropdown-menu > li > a:hover,
+	.navbar-default .navbar-toggle:hover {
+		color: #30231d;
+	}
     .navbar-default .navbar-nav .open .dropdown-menu > li > a:focus {
           color: #30231d;
     }
