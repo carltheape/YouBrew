@@ -1,5 +1,5 @@
 # You Brew
-![youbrew logo](client/assets/images/ms-icon-150x150.png)
+![youbrew logo](ms-icon-150x150.png)
 
 An internal facing tracking app for Arches Brewing, Atlanta GA.  This application was built using React, Node, Axios and MongoDB. This app allows the sales team in the field to have a live feed into the inventory of the brewery and their development cycle.  The user can track processes, request new batches, reserve portions of incomplete batches for future sales and communicate with the brewers in real time.  Because this was built not to be accesible by the public, an admin user needs to be seeded in the DB in order to access anything before running.
 
